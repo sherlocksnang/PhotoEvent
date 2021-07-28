@@ -1,16 +1,10 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    box-sizing: border-box;
-    background-color: rgb(189, 235, 235);
-    width: 100%;
-    padding: 10px;
-    font-family: system-ui;}
-input{
-    display: none;
+    font-family: sans-serif;
 }
-.container{
+body{
+    background: #b4f1f1;
     width: 100%;
     text-align: center;
 }
@@ -19,13 +13,14 @@ h1{
     font-size: 35px;
     position: relative;
     margin: 40px 0;
+    color: #a56cc1;
 }
 h1::before{
     content: "";
     position: absolute;
     width: 100px;
     height: 3px;
-    background-color: rgb(221, 167, 231);
+    background-color: #fcb1b1;
     bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
@@ -42,64 +37,55 @@ h1::before{
         width: 100px;
     }
 }
-.top-content{
-    background-color: gold;
-    width: 90%;
-    margin: 0 auto 20px auto;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    border-radius: 5px;
-    box-shadow: 3px 3px 5px lightgreen;
+
+
+
+
+
+
+
+
+.event-gallery {
+  width: 80%;
+  margin: 100px auto 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
 }
-h3{
-  height: 120%;
-  background-color: rgb(167, 214, 236);
-  line-height: 50px;
-  padding: 0 30px;
-  color: rgb(0, 40, 149);
-  cursor: pointer;
-}
-label {
-    background-color: #dbd81f;
-    color: rgb(138, 44, 226);
-    transition: background-color 1s;
-  }
-  
-  label:hover {
-    background-color: #85ddb1;
-  }
-  
-  label:focus,
-  label:active {
-    background-color: rgb(41, 202, 122);
-    transition: none;
-  }
-
-
-
-.event-gallery{
-    width: 90%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
-}
-
-.pic{
-    position: relative;
-    border-radius: 10px;
-    box-shadow: 3px 3px 5px lightgoldenrodyellow;
+.event-gallery img{
+    width: 100%;
     cursor: pointer;
 }
-.pic img{
-       width: 100%;
-       height: 100%;
-       border-radius: 10px;
+
+.event-gallery img:hover{
+    transform: scale(0.8) rotate(-15deg);
+    border-radius: 20px;
+    box-shadow: 0 32px 7px rgba(red, green, blue,alpha );
 }
-.pic::before{
-    content: "FBESU Event";
+
+.full-img{
+    width: 100%;
+    height: 100vh;
+    background: rgba(241, 251, 166, 0.81);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+.full-img img{
+    width: 80%;
+    height: 100%;
+    max-width: 500px;
+}
+.full-img span{
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 5%;
+    right: 5%;
+    font-size: 25px;
+    font-family: sans-serif;
+    color: #430d2770;
+    cursor: pointer;
 }
